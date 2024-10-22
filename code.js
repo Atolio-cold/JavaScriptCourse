@@ -66,3 +66,39 @@ function calculateYears(birthYear, currentYear) {
   
   console.log(makeFruitJuice(3, 2));
   
+
+function cutVegetablePieces(vegetable) {
+    return vegetable * 3;
+  }
+  
+
+  function foodProcessor(apples, carrots) {
+    const applePieces = cutVegetablePieces(apples);
+    const carrotPieces = cutVegetablePieces(carrots);
+  
+    const foodMix = `Mix with ${applePieces} pieces of apple and ${carrotPieces} pieces of carrot.`;
+    return foodMix;
+  }
+  console.log(foodProcessor(2, 4));
+  
+  const calcDifference = function (startYear, endYear) {
+    return endYear - startYear;
+  }
+  
+  
+  const yearsUntilGoal = function (startYear, goalYear, name) {
+    const yearsSpent = calcDifference(startYear, goalYear);
+    const yearsLeft = 5 - yearsSpent;
+  
+    if (yearsLeft > 0) {
+      console.log(`${name} will achieve the goal in ${yearsLeft} years.`);
+      return yearsLeft;
+    } else {
+      console.log(`${name} has already achieved the goal! 🎉`);
+      return 0;
+    }
+  }
+  
+  console.log(yearsUntilGoal(2015, 2020, 'Anna'));
+  console.log(yearsUntilGoal(2010, 2020, 'Mike'));
+  
